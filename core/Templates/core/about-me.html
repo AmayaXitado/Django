@@ -1,10 +1,25 @@
 {% extends 'core/base.html' %}
 
+
+
+
 {% block title %}Acerca de {% endblock %}
 
-{% block content %}
+{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
 
-<h2>Acerca de</h2>
-<p>Me llamo Jose y soy programador. </p>
+    {% block headers %}
+        <h1>Jose David Amaya</h1>
+        <span class="subheading">Desarrollador Web</span>
+    {% endblock %}
 
-{% endblock %}
+    {% block content %}
+
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg ' %}" alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Jose Amaya</h2>   
+            <p>Soy Jose David Amaya practicante del sena en la fabrica de software, donde me desempeño como programador </p>
+    </div>
+    {% endblock %}
+
